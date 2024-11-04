@@ -1,0 +1,201 @@
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #202124;
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: 'Press Start 2P', system-ui;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: #242024;
+  gap: 14px;
+  position: relative;
+
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.clockContainer{
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock{
+  position: relative;
+  display: flex;
+  height: 10vh;
+  width: 15vw;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 20px;
+}
+.time{
+  align-items: center;
+  justify-content: center;
+  font-family:'Press Start 2P', system-ui;;
+}
+.cat1Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat1{
+  width: 300px; /* Width of one frame */
+  height: 300px; /* Height of one frame */
+  background: url(/cat-sleeping-sprite.png);
+  background-size: 1200px 300px; /* Total size of the sprite sheet */
+  z-index: 10;
+  transform: scale(0.7); /* Scale to 80% */
+  transform-origin: center;
+
+  animation: cat-sleep 3s steps(4) infinite;
+}
+
+@keyframes cat-sleep {
+  from{
+    background-position: 0;
+  }
+  to{
+    background-position: -1200px;
+  }
+}
+
+header {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  display: flex;
+  align-items: stretch;
+}
+
+header,
+.main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 14px;
+}
+
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+}
+
+header input:hover {
+  opacity: 0.7;
+  transition-duration: 200ms;
+  transform: translateY(-3px)
+}
+
+header input:focus {
+  opacity: 0.7;
+  transition-duration: 200ms;
+  transform: translateY(-3px)
+}
+
+header button {
+  border-radius: 14px;
+  background: transparent;
+  transition-duration: 200ms;
+  cursor: pointer;
+  box-shadow: 0 4px #999
+}
+
+header button:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px #999
+}
+
+header button:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(3px)
+}
+
+
+header button,
+header input {
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  background: white;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: white;
+  transition-duration: 200ms;
+}
+
+.todoItem:hover {
+  opacity: 0.7;
+  transform: translateY(-2px)
+}
+
+.todoItem p {
+  flex: 1;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.actionsContainer button {
+  transition-duration: 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.actionsContainer button:hover {
+  opacity: 0.7;
+}
+
+
+
+@media (min-width: 640px) {
+
+  header button,
+  header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
