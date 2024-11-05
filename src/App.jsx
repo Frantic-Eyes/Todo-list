@@ -2,7 +2,6 @@ import {useState, useEffect} from "react"
 import Cat1 from "./components/cat1"
 import TodoInput from "./components/TodoInput"
 import TodoList from "./components/TodoList"
-import Clock from "./components/Clock"
 
 function App() {
   const [todos,setTodos]= useState([])
